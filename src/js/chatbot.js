@@ -229,7 +229,7 @@ class GraceXChatbot {
     addMessage(text, sender) {
         const chat = document.getElementById('grace-x-chat');
         const msg = document.createElement('div');
-        msg.className = \`chat-msg \${sender}\`;
+        msg.className = `chat-msg ${sender}`;
         msg.innerHTML = text;
         chat.appendChild(msg);
         chat.scrollTop = chat.scrollHeight;
