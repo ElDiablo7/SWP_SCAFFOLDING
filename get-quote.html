@@ -38,17 +38,68 @@
             border-color: var(--electric-blue);
             background: rgba(255,255,255,0.06);
         }
+        
+        /* New utility classes for hero section */
+        .quote-hero {
+            min-height: 40vh;
+            align-items: center;
+            position: relative;
+            display: flex;
+        }
+        .quote-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bg-dark) 100%);
+            z-index: -1;
+        }
+        .quote-hero-content {
+            text-align: center;
+            padding-bottom: 3rem;
+            width: 100%;
+        }
+        .quote-hero h1 {
+            font-size: 3rem;
+        }
+        .quote-hero p {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            color: var(--text-muted);
+        }
+        .form-section-title {
+            margin-bottom: 1.5rem;
+            color: #fff;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+        .project-section-title {
+            margin: 2.5rem 0 1.5rem;
+            color: #fff;
+            border-bottom: 1px solid var(--glass-border);
+            padding-bottom: 0.5rem;
+        }
+        .form-submit-container {
+            margin-top: 3rem;
+            text-align: center;
+        }
+        .btn-submit {
+            width: 100%;
+            max-width: 300px;
+            padding: 1.2rem;
+        }
     </style>
 </head>
 <body>
     <header id="main-header"></header>
 
     <main>
-        <section class="hero section-padding flex" style="min-height: 40vh; align-items: center; position: relative;">
-            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bg-dark) 100%); z-index: -1;"></div>
-            <div class="container animate-slide-up" style="text-align: center; padding-bottom: 3rem;">
-                <h1 style="font-size: 3rem;">Request a <span class="text-yellow">Quote</span></h1>
-                <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--text-muted);">
+        <section class="hero quote-hero section-padding">
+            <div class="quote-hero-bg"></div>
+            <div class="container quote-hero-content animate-slide-up">
+                <h1>Request a <span class="text-yellow">Quote</span></h1>
+                <p>
                     Fill out the form below and our team will get back to you with a transparent, fixed-price estimate within 24 hours.
                 </p>
             </div>
@@ -58,36 +109,36 @@
             <div class="glass-panel quote-form-container">
                 <form id="quote-form">
                     
-                    <h3 style="margin-bottom: 1.5rem; color: #fff; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">1. Your Details</h3>
+                    <h3 class="form-section-title">1. Your Details</h3>
                     <div class="auto-grid" style="gap: 1.5rem;">
                         <div class="form-group">
-                            <label class="form-label">First Name *</label>
-                            <input type="text" class="form-control" required>
+                            <label for="first-name" class="form-label">First Name *</label>
+                            <input type="text" id="first-name" name="first-name" class="form-control" placeholder="e.g. John" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Last Name *</label>
-                            <input type="text" class="form-control" required>
+                            <label for="last-name" class="form-label">Last Name *</label>
+                            <input type="text" id="last-name" name="last-name" class="form-control" placeholder="e.g. Smith" required>
                         </div>
                     </div>
                     <div class="auto-grid" style="gap: 1.5rem;">
                         <div class="form-group">
-                            <label class="form-label">Email Address *</label>
-                            <input type="email" class="form-control" required>
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="john.smith@example.com" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Phone Number *</label>
-                            <input type="tel" class="form-control" required>
+                            <label for="phone" class="form-label">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="e.g. 07123 456789" required>
                         </div>
                     </div>
 
-                    <h3 style="margin: 2.5rem 0 1.5rem; color: #fff; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">2. Project Details</h3>
+                    <h3 class="project-section-title">2. Project Details</h3>
                     <div class="form-group">
-                        <label class="form-label">Project Postcode *</label>
-                        <input type="text" class="form-control" required>
+                        <label for="postcode" class="form-label">Project Postcode *</label>
+                        <input type="text" id="postcode" name="postcode" class="form-control" placeholder="e.g. SW1A 1AA" required>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Type of Project *</label>
-                        <select class="form-control" required>
+                        <label for="project-type" class="form-label">Type of Project *</label>
+                        <select id="project-type" name="project-type" class="form-control" required title="Select an option for Type of Project">
                             <option value="">Select an option...</option>
                             <option value="domestic">Domestic (Home Extension, Roof, etc.)</option>
                             <option value="commercial">Commercial (Retail, Office, etc.)</option>
@@ -96,8 +147,8 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label class="form-label">Estimated Start Date</label>
-                        <select class="form-control">
+                        <label for="start-date" class="form-label">Estimated Start Date</label>
+                        <select id="start-date" name="start-date" class="form-control" title="Select an option for Estimated Start Date">
                             <option value="asap">As soon as possible</option>
                             <option value="1week">Within 1 week</option>
                             <option value="2-4weeks">2-4 weeks</option>
@@ -106,12 +157,12 @@
                     </div>
                     
                     <div class="form-group">
-                        <label class="form-label">Project Description</label>
-                        <textarea class="form-control" style="min-height: 120px;" placeholder="Please provide any relevant details (e.g., number of storeys, specific access issues, length of time needed)."></textarea>
+                        <label for="description" class="form-label">Project Description</label>
+                        <textarea id="description" name="description" class="form-control" style="min-height: 120px;" placeholder="Please provide any relevant details (e.g., number of storeys, specific access issues, length of time needed)."></textarea>
                     </div>
 
-                    <div style="margin-top: 3rem; text-align: center;">
-                        <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px; padding: 1.2rem;">Submit Quote Request</button>
+                    <div class="form-submit-container">
+                        <button type="submit" class="btn btn-primary btn-submit">Submit Quote Request</button>
                     </div>
                 </form>
             </div>
