@@ -80,3 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (headerEl) headerEl.innerHTML = components.header;
     if (footerEl) footerEl.innerHTML = components.footer;
 });
+
+// Load the GRACE-X Chatbot globally
+import './chatbot.js';
+

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get a Free Scaffolding Quote | SWP Scaffolding</title>
+    <meta name="description" content="Request a free, fixed-price scaffolding quote from SWP Scaffolding. Fast response times for projects in London & Surrey.">
+    <link rel="stylesheet" href="/src/style/index.css">
+    <style>
+        .quote-form-container {
+            max-width: 800px;
+            margin: -50px auto 50px;
+            padding: 3rem;
+            position: relative;
+            z-index: 10;
+            background: var(--bg-card);
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+        .form-control {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: #fff;
+            transition: var(--transition);
+        }
+        .form-control:focus {
+            outline: none;
+            border-color: var(--electric-blue);
+            background: rgba(255,255,255,0.06);
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header"></header>
+
+    <main>
+        <section class="hero section-padding flex" style="min-height: 40vh; align-items: center; position: relative;">
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, var(--primary-blue) 0%, var(--bg-dark) 100%); z-index: -1;"></div>
+            <div class="container animate-slide-up" style="text-align: center; padding-bottom: 3rem;">
+                <h1 style="font-size: 3rem;">Request a <span class="text-yellow">Quote</span></h1>
+                <p style="font-size: 1.2rem; margin-top: 1rem; color: var(--text-muted);">
+                    Fill out the form below and our team will get back to you with a transparent, fixed-price estimate within 24 hours.
+                </p>
+            </div>
+        </section>
+
+        <section style="padding: 0 2rem;">
+            <div class="glass-panel quote-form-container">
+                <form id="quote-form">
+                    
+                    <h3 style="margin-bottom: 1.5rem; color: #fff; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">1. Your Details</h3>
+                    <div class="auto-grid" style="gap: 1.5rem;">
+                        <div class="form-group">
+                            <label class="form-label">First Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Last Name *</label>
+                            <input type="text" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="auto-grid" style="gap: 1.5rem;">
+                        <div class="form-group">
+                            <label class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <h3 style="margin: 2.5rem 0 1.5rem; color: #fff; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.5rem;">2. Project Details</h3>
+                    <div class="form-group">
+                        <label class="form-label">Project Postcode *</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Type of Project *</label>
+                        <select class="form-control" required>
+                            <option value="">Select an option...</option>
+                            <option value="domestic">Domestic (Home Extension, Roof, etc.)</option>
+                            <option value="commercial">Commercial (Retail, Office, etc.)</option>
+                            <option value="industrial">Industrial (Plant, Infrastructure, etc.)</option>
+                            <option value="temporary-roof">Temporary Roof</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Estimated Start Date</label>
+                        <select class="form-control">
+                            <option value="asap">As soon as possible</option>
+                            <option value="1week">Within 1 week</option>
+                            <option value="2-4weeks">2-4 weeks</option>
+                            <option value="1month+">More than a month away</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Project Description</label>
+                        <textarea class="form-control" style="min-height: 120px;" placeholder="Please provide any relevant details (e.g., number of storeys, specific access issues, length of time needed)."></textarea>
+                    </div>
+
+                    <div style="margin-top: 3rem; text-align: center;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; max-width: 300px; padding: 1.2rem;">Submit Quote Request</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer"></footer>
+    <script type="module" src="/src/js/components.js"></script>
+</body>
+</html>
